@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Translator App</h1>
+        <form id="translateForm">
+            <textarea id="text" placeholder="Enter text to translate"></textarea>
+            <input type="text" id="targetLanguage" placeholder="Target Language (e.g., en, fr)">
+            <button type="submit">Translate</button>
+        </form>
+        <p id="translatedText"></p>
+
+        <form id="imageForm" enctype="multipart/form-data">
+            <input type="file" id="imageFile">
+            <button type="submit">Extract Text</button>
+        </form>
+        <p id="extractedText"></p>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
